@@ -1,0 +1,10 @@
+clang -shared -fPIC \
+  -I/data/data/com.termux/files/usr/include \
+  -I/data/data/com.termux/files/usr/include/ndk-sysroot \
+  -o libmylib.so mylib.c
+  
+  
+  export JAVA_HOME=/data/data/com.termux/files/usr/lib/jvm/java-17-openjdk/
+
+
+[[ "$PS1" == '\s-\v\$ ' ]] && PS1='\[\e[32m\]\w\[\e[0m\] \[\e[33m\]\$\[\e[0m\] '

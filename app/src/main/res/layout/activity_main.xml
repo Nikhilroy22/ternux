@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textIsSelectable="true" 
+        android:fillViewport="true"
+        android:background="#000000">
+
+        <TextView
+            android:id="@+id/terminalView"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="4dp"
+            android:layout_height="wrap_content"
+            android:textColor="#0d740e"
+            android:textSize="17sp"
+            
+            android:typeface="monospace"
+            android:text="" />
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/inputView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter command"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:background="#222222"
+        android:textSize="16sp"
+        
+        android:inputType="text"
+        />
+        <Button
+    android:id="@+id/btnCtrlC"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Ctrl + C"
+    
+/>
+
+</LinearLayout>

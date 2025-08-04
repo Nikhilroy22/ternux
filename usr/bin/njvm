@@ -1,0 +1,10 @@
+echo "nikhil roy"
+cd /sdcard
+cp jvm.zip /data/data/com.npuja.nikhil/files/usr/lib
+cd
+cd $PREFIX/lib
+unzip jvm.zip
+
+rm -rf jvm.zip
+
+echo "okkk"

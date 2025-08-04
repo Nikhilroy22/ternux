@@ -1,0 +1,31 @@
+# Simplified prompt without color
+[[ "$PS1" == '\s-\v\$ ' ]] && PS1='\[\e[32m\]\w\[\e[0m\] \[\e[33m\]\$\[\e[0m\] '
+
+
+# Show Message of the Day
+/data/data/com.npuja.nikhil/files/motd.sh
+
+export PATH=$HOME/java-17-openjdk/bin:/system/bin:/vendor/bin:$HOME/Android-Sdk/cmdline-tools/latest/bin:$PATH
+
+
+export JAVA_HOME=$HOME/java-17-openjdk/
+
+
+
+export GRADLE_USER_HOME=$HOME/.gradle
+
+
+export ANDROID_SDK_ROOT=$HOME/Android-Sdk
+
+# ~/.bashrc
+
+export LD_LIBRARY_PATH=/data/data/com.npuja.nikhil/files/lib:$LD_LIBRARY_PATH
+
+export JAVA_OPTS="-Djava.io.tmpdir=$HOME/tmp"
+
+
+
+command_not_found_handle() {
+    echo -e "😢 দুঃখিত, '$1' নামে কোনো কমান্ড পাওয়া যায়নি!"
+    return 127
+}

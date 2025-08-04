@@ -1,0 +1,35 @@
+#!/data/data/com.npuja.nikhil/files/bash
+
+REPO_DIR="/sdcard/repo"
+INSTALL_DIR="/data/data/com.npuja.nikhil/files/usr"
+
+cmd="$1"
+pkg="$2"
+
+case "$cmd" in
+  install)
+    if [ -f "$REPO_DIR/$pkg.zip" ]; then
+      echo "Installing $pkg..."
+      mkdir -p "$INSTALL_DIR"
+      unzip -o "$REPO_DIR/$pkg.zip" -d "$INSTALL_DIR"
+      echo "$pkg installed."
+    else
+      echo "Package $pkg not found!"
+    fi
+    ;;
+  remove)
+    echo "Removing $pkg..."
+    rm -rf "$INSTALL_DIR/$pkg"
+    echo "$pkg removed."
+    ;;
+  list)
+    echo "Available packages:"
+    ls "$REPO_DIR" | sed 's/.zip//'
+    ;;
+  help|*)
+    echo "Usage:"
+    echo "  apt install <pkg>"
+    echo "  apt remove <pkg>"
+    echo "  apt list"
+    ;;
+esac

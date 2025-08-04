@@ -1,0 +1,16 @@
+echo -e "😢 দুঃখ নামে কোনো কমান্ড পাওয়া যায়নি!"
+
+# Simplified prompt without color
+[[ "$PS1" == '\s-\v\$ ' ]] && PS1='\[\e[32m\]\w\[\e[0m\] \[\e[33m\]\$\[\e[0m\] '
+
+
+
+/data/data/com.npuja.nikhil/files/home/motd.sh
+
+export PATH=$PREFIX/lib/java-17-openjdk/bin:$PATH
+
+
+export LD_LIBRARY_PATH=/data/data/com.npuja.nikhil/files/usr/lib/aapt2:$LD_LIBRARY_PATH
+
+
+export JAVA_HOME=$PREFIX/lib/java-17-openjdk
