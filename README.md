@@ -1,1 +1,1 @@
-# ternux
+# ternux app
